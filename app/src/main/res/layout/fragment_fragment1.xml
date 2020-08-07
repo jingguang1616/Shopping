@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Fragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@drawable/sousuo"
+        android:id="@+id/iv"/>
+
+    <com.youth.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/banner"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="#fff"
+            android:orientation="horizontal"
+            tools:context=".textScollView.MarqueeNewsActivity">
+            <ImageView
+                android:id="@+id/tvTao"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/dp_29"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:src="@drawable/gonggao"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="5dp" />
+
+            <View
+                android:id="@+id/viewFen"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/darker_gray" />
+            <ViewFlipper
+                android:id="@+id/filpper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                android:inAnimation="@anim/new_in"
+                android:outAnimation="@anim/new_out" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/tejia" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="火爆进行中"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/rcy"/>
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clipChildren="false"
+        android:layerType="software"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="com.qianmo.gallerythreed.MainActivity">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewPager"
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
